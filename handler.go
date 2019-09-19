@@ -1,3 +1,4 @@
+// Package handler contains some simple helpers to building web using standard net/http package
 package handler
 
 import (
