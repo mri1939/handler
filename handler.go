@@ -59,7 +59,7 @@ func (m *MethodHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 // GetURIParam returns a slice of string of parameters parsed from given URI
 func GetURIParam(prefix, uri string) []string {
-	uri = strings.TrimPrefix(strings.TrimPrefix(uri, prefix), "/")
+	uri = strings.Trim(strings.TrimPrefix(uri, prefix), "/")
 	if len(uri) < 1 {
 		return nil
 	}

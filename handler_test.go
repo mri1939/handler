@@ -17,6 +17,7 @@ func TestGetURIParam(t *testing.T) {
 		{"Double Params", "/user", "/user/1/2", []string{"1", "2"}},
 		{"More Params", "/something", "/something/1/2/3/4/5", []string{"1", "2", "3", "4", "5"}},
 		{"No Param", "/user", "/user/", nil},
+		{"Trailing slash", "/user", "/user/1/", []string{"1"}},
 	}
 	for _, test := range table {
 		t.Run(test.name, func(t *testing.T) {
